@@ -7,45 +7,45 @@
 
 // MIT License, http://www.opensource.org/licenses/mit-license.php
 (function($) {
-	$.fn.champagne = function(options) {
+    $.fn.champagne = function(options) {
 
-		var defaults = {
-			beginning_delay: 300,
-			delay_between: 50,
-			duration: 500,
-			onFinish: function() {}
-		};
-		options = $.extend(defaults, options);
+        var defaults = {
+            beginning_delay: 300,
+            delay_between: 50,
+            duration: 500,
+            onFinish: function() {}
+        };
+        options = $.extend(defaults, options);
 
-	    return this.each(function() {
-			var $container = $(this);
+        return this.each(function() {
+            var $container = $(this);
 
-			$container.children().each(function() {
-				$(this).contents().wrap('<div class="hidden"></div>');
-			});
-			
-			var array = $container.children().children('.hidden');
+            $container.children().each(function() {
+                $(this).contents().wrap("<div class='hidden'></div>");
+            });
+            
+            var array = $container.children().children("div.hidden");
 
-			setTimeout(function(){
-				showRandom($container);
-			}, options.beginning_delay);
+            setTimeout(function(){
+                showRandom($container);
+            }, options.beginning_delay);
 
-			function showRandom($container) {
-				var random = Math.floor(Math.random() * array.length);
+            function showRandom($container) {
+                var random = Math.floor(Math.random() * array.length);
 
-				$(array[random]).fadeIn(options.duration);
-				array.splice(random, 1);
+                $(array[random]).fadeIn(options.duration);
+                array.splice(random, 1);
 
-				if (array.length > 0) {
-					setTimeout(function() {
-						showRandom($container);
-					}, options.delay_between);
-				} else {
-					setTimeout(function() {
-						options.onFinish.call(this);
-					}, options.duration);
-				}
-			}
-	    });
-	};
+                if (array.length > 0) {
+                    setTimeout(function() {
+                        showRandom($container);
+                    }, options.delay_between);
+                } else {
+                    setTimeout(function() {
+                        options.onFinish.call(this);
+                    }, options.duration);
+                }
+            }
+        });
+    };
 })(jQuery);

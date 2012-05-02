@@ -11,7 +11,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,hr,p,input,textarea,bl
 body {
     background: #fafafa;
     color: #777;
-    font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
     text-align: center;
     -webkit-font-smoothing: antialiased;
 }
@@ -23,7 +23,7 @@ body {
 
 h1 {
     color: #444;
-    font-family: 'Trochut', 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
+    font-family: 'Trochut', 'Helvetica Neue', 'Arial', sans-serif;
     font-size: 6em;
     margin: 20px 0 40px;
     text-shadow: 0 1px 0 #fff;
@@ -40,7 +40,7 @@ nav {
     width: 220px;
 }
 nav ul {
-    font-size: 0.8em;
+    font-size: 0.9em;
     margin: 10px 0;
 }
 nav li {

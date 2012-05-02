@@ -57,10 +57,14 @@ ul#champagne li {
     width: 150px;
 }
 
+ul#champagne li > * {
+    display: none;
+}
+
 ul#champagne img {
     margin: 1px 0 0;
 }
 
-ul#champagne .hidden {
+ul#champagne div.hidden {
     display: none;
 }
