@@ -25,14 +25,14 @@ h1 {
     color: #444;
     font-family: 'Trochut', 'Helvetica Neue', 'Arial', sans-serif;
     font-size: 6em;
-    margin: 20px 0 40px;
+    margin: 20px 0;
     text-shadow: 0 1px 0 #fff;
 }
 
 h2 {
-    font-size: 1.3em;
-    font-weight: bold;
-    margin: 0 0 10px;
+    color: #444;
+    font-size: 1em;
+    margin: 0 0 40px;
 }
 nav {
     margin: 0 auto 40px;
