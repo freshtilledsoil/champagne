@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>champagne.js | fresh tilled soil</title>
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:normal,700,800|Trochut:400,700' rel='stylesheet' type='text/css' />
+        <link rel="stylesheet" type="text/css" href="demo.css" />
+        <link rel="stylesheet" type="text/css" href="../champagne.css" />
+
+        <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+    </head>
+    <body>
+        <div class="container">
+            <h1>champagne.js</h1>
+            
+            <nav>
+                <a class="button" href="javascript: void(0)">Download on Github</a>
+
+                <ul>
+                    <li><a href="javascript: void(0)" id="view-text" class="active">text demo</a></li>
+
+                    <li><a href="javascript: void(0)" id="view-images">images demo</a></li>
+                </ul>
+            </nav>
+    
+            <ul id="champagne">
+                <li>hello</li>
+                <li>hola</li>
+                <li>bon giorno</li>
+                <li>ni hao</li>
+                <li>guten tag</li>
+                <li>namaste</li>
+                <li>hello</li>
+                <li>bonjour</li>
+                <li>hola</li>
+                <li>bon giorno</li>
+                <li>ni hao</li>
+                <li>chao</li>
+                <li>guten tag</li>
+                <li>namaste</li>
+                <li>bonjour</li>
+                <li>hola</li>
+                <li>ni hao</li>
+                <li>chao</li>
+                <li>guten tag</li>
+                <li>namaste</li>
+                <li>hello</li>
+                <li>bonjour</li>
+                <li>hola</li>
+                <li>bon giorno</li>
+            </ul>
+        </div> <!-- end .container -->
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script type="text/javascript" src="../jquery.champagne.js"></script>
+
+        <script type="text/javascript">
+            $(function() {
+                $('ul#champagne').champagne();
+
+                // Demo
+                $('#view-images').click(function() {
+                    if (!$(this).hasClass('active')) {
+                        $('#view-text').removeClass('active');
+                        $(this).addClass('active');
+    
+                        $('ul#champagne li').each(function() {
+                            $(this).css({height: 70, padding: 0, width: 190}).addClass($(this).text()).contents().remove();
+                            $(this).append('<img src="http://placehold.it/188x68/fafafa/999" alt="" />');
+                        });
+                        $('ul#champagne').champagne();
+                    }
+                });
+
+                $('#view-text').click(function() {
+                    if (!$(this).hasClass('active')) {
+                        $('#view-images').removeClass('active');
+                        $(this).addClass('active');
+    
+                        $('ul#champagne li').each(function() {
+                            $(this).removeAttr('style').contents().remove()
+                            $(this).append($(this).attr('class')).removeAttr('class');
+                        });
+
+                        $('ul#champagne').champagne();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
