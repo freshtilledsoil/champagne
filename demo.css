@@ -21,6 +21,10 @@ body {
     width: 780px;
 }
 
+strong {
+    font-weight: bold;
+}
+
 #fork-me {
     background: url(https://a248.e.akamai.net/camo.github.com/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67) no-repeat;
     display: block;
@@ -42,11 +46,14 @@ h1 {
 }
 
 h2 {
-    font-size: 1.2em;
+    font-size: 0.95em;
     margin: 0 0 50px;
 }
 h2 a {
+}
+h2 strong {
     color: #444;
+    font-size: 1.3em;
 }
 
 nav {
