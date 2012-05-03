@@ -2,27 +2,27 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
         <title>champagne.js | fresh tilled soil</title>
 
         <link href='http://fonts.googleapis.com/css?family=Trochut:400,700' rel='stylesheet' type='text/css' />
         <link rel="stylesheet" type="text/css" href="demo.css" />
-        <link rel="stylesheet" type="text/css" href="../champagne.css" />
+        <link rel="stylesheet" type="text/css" href="champagne/champagne.css" />
 
         <!--[if IE]>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
 
     </head>
     <body>
         <div class="container">
-            <a href="http://github.com/freshtilledsoil/champagne"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/camo.github.com/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a>
+            <a href="http://github.com/freshtilledsoil/champagne" id="fork-me">Fork me on Github</a>
             <h1>champagne.js</h1>
-            <h2>built by <strong>fresh tilled soil</strong></h2>
+            <h2><a href="http://freshtilledsoil.com">built by <strong>fresh tilled soil</strong></a></h2>
             
             <nav>
-                <a class="button" href="http://github.com/freshtilledsoil/champagne">Download on Github</a>
+                <a class="button" href="https://github.com/freshtilledsoil/champagne/zipball/master">Download from Github</a>
 
                 <ul>
                     <li><a href="javascript: void(0)" id="view-text" class="active">text demo</a></li>
@@ -60,37 +60,37 @@
         </div> <!-- end .container -->
 
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-        <script type="text/javascript" src="../jquery.champagne.js"></script>
+        <script type="text/javascript" src="champagne/jquery.champagne.min.js"></script>
 
         <script type="text/javascript">
             $(function() {
-                $('ul#champagne').champagne();
+                $("ul#champagne").champagne();
 
                 // Demo
-                $('#view-images').click(function() {
-                    if (!$(this).hasClass('active')) {
-                        $('#view-text').removeClass('active');
-                        $(this).addClass('active');
+                $("#view-images").click(function() {
+                    if (!$(this).hasClass("active")) {
+                        $("#view-text").removeClass("active");
+                        $(this).addClass("active");
     
-                        $('ul#champagne li').each(function() {
+                        $("ul#champagne li").each(function() {
                             $(this).css({height: 70, padding: 0, width: 190}).addClass($(this).text()).contents().remove();
-                            $(this).append('<img src="http://placehold.it/188x68/fafafa/999" alt="" />');
+                            $(this).append("<img src='http://placehold.it/188x68/fafafa/999' alt='Image' />");
                         });
-                        $('ul#champagne').champagne();
+                        $("ul#champagne").champagne();
                     }
                 });
 
-                $('#view-text').click(function() {
-                    if (!$(this).hasClass('active')) {
-                        $('#view-images').removeClass('active');
-                        $(this).addClass('active');
+                $("#view-text").click(function() {
+                    if (!$(this).hasClass("active")) {
+                        $("#view-images").removeClass("active");
+                        $(this).addClass("active");
     
-                        $('ul#champagne li').each(function() {
-                            $(this).removeAttr('style').contents().remove()
-                            $(this).append($(this).attr('class')).removeAttr('class');
+                        $("ul#champagne li").each(function() {
+                            $(this).removeAttr("style").contents().remove()
+                            $(this).append($(this).attr("class")).removeAttr("class");
                         });
 
-                        $('ul#champagne').champagne();
+                        $("ul#champagne").champagne();
                     }
                 });
             });

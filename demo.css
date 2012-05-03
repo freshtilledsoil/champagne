@@ -21,27 +21,42 @@ body {
     width: 780px;
 }
 
+#fork-me {
+    background: url(https://a248.e.akamai.net/camo.github.com/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67) no-repeat;
+    display: block;
+    height: 149px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    text-indent: -9999px;
+    top: 0;
+    width: 149px;
+}
+
 h1 {
     color: #444;
     font-family: 'Trochut', 'Helvetica Neue', 'Arial', sans-serif;
     font-size: 6em;
-    margin: 20px 0;
+    margin: 20px 0 10px;
     text-shadow: 0 1px 0 #fff;
 }
 
 h2 {
-    color: #444;
-    font-size: 1em;
-    margin: 0 0 40px;
+    font-size: 1.2em;
+    margin: 0 0 50px;
 }
+h2 a {
+    color: #444;
+}
+
 nav {
     margin: 0 auto 40px;
     overflow: hidden;
     width: 220px;
 }
 nav ul {
-    font-size: 0.9em;
-    margin: 10px 0;
+    font-size: 0.8em;
+    padding: 10px 0;
 }
 nav li {
     float: left;
@@ -93,10 +108,9 @@ a.button {
     box-shadow:         inset 0 1px 0 #a5b;
     clear: both;
     color: #fff;
-    cursor: default;
     display: block;
     font-weight: bold;
-    padding: 5px 8px;
+    padding: 6px 8px;
     text-align: center;
     text-shadow: 0 -2px 0 #203;
     -webkit-transition: box-shadow 0.2s ease;
