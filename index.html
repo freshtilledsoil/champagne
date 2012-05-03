@@ -6,7 +6,7 @@
 
         <title>champagne.js | fresh tilled soil</title>
 
-        <link href='http://fonts.googleapis.com/css?family=Trochut:400,700' rel='stylesheet' type='text/css' />
+        <link href="http://fonts.googleapis.com/css?family=Trochut:400,700" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" type="text/css" href="demo.css" />
         <link rel="stylesheet" type="text/css" href="champagne/champagne.css" />
 
@@ -22,7 +22,7 @@
             <a href="http://github.com/freshtilledsoil/champagne" id="fork-me">Fork me on Github</a>
             <h1>champagne.js</h1>
             <h2><a href="http://freshtilledsoil.com">built by <strong>fresh tilled soil</strong></a></h2>
-            
+
             <nav>
                 <a class="button" href="https://github.com/freshtilledsoil/champagne/zipball/master">Download from Github</a>
 
@@ -32,7 +32,7 @@
                     <li><a href="javascript: void(0)" id="view-images">images demo</a></li>
                 </ul>
             </nav>
-    
+
             <ul id="champagne">
                 <li>hello</li>
                 <li>hola</li>
@@ -73,7 +73,7 @@
                     if (!$(this).hasClass("active")) {
                         $("#view-text").removeClass("active");
                         $(this).addClass("active");
-    
+
                         $("ul#champagne li").each(function() {
                             $(this).css({height: 70, padding: 0, width: 190}).addClass($(this).text()).contents().remove();
                             $(this).append("<img src='http://placehold.it/188x68/fafafa/999' alt='Image' />");
@@ -86,7 +86,7 @@
                     if (!$(this).hasClass("active")) {
                         $("#view-images").removeClass("active");
                         $(this).addClass("active");
-    
+
                         $("ul#champagne li").each(function() {
                             $(this).removeAttr("style").contents().remove()
                             $(this).append($(this).attr("class")).removeAttr("class");
