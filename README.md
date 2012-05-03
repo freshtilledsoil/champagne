@@ -5,7 +5,7 @@ Version 0.0.6
 ### Usage
 1. Style grid layout with CSS
 2. Include latest jQuery and jquery.champagne.js
-4. Initialize champagne() on parent element
+3. Initialize champagne() on parent element
 
 ### Options
 - `beginning_delay`: _integer (default: 300)_, delay before animation starts
