@@ -33,7 +33,7 @@
                 </ul>
             </nav>
 
-            <ul id="champagne">
+            <ul class="champagne">
                 <li>hello</li>
                 <li>hola</li>
                 <li>bon giorno</li>
@@ -66,7 +66,7 @@
 
         <script type="text/javascript">
             $(function() {
-                $("ul#champagne").champagne();
+                $("ul.champagne").champagne();
 
                 // Demo
                 $("#view-images").click(function() {
@@ -74,11 +74,11 @@
                         $("#view-text").removeClass("active");
                         $(this).addClass("active");
 
-                        $("ul#champagne li").each(function() {
+                        $("ul.champagne li").each(function() {
                             $(this).css({height: 70, padding: 0, width: 190}).addClass($(this).text()).contents().remove();
                             $(this).append("<img src='http://placehold.it/188x68/fafafa/999' alt='Image' />");
                         });
-                        $("ul#champagne").champagne();
+                        $("ul.champagne").champagne();
                     }
                 });
 
@@ -87,12 +87,12 @@
                         $("#view-images").removeClass("active");
                         $(this).addClass("active");
 
-                        $("ul#champagne li").each(function() {
+                        $("ul.champagne li").each(function() {
                             $(this).removeAttr("style").contents().remove()
                             $(this).append($(this).attr("class")).removeAttr("class");
                         });
 
-                        $("ul#champagne").champagne();
+                        $("ul.champagne").champagne();
                     }
                 });
             });
