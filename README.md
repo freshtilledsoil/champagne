@@ -1,11 +1,12 @@
 # Champagne.js
-
 Version 0.0.6
 
 ### Usage
 1. Style grid layout with CSS
 2. Include latest jQuery and jquery.champagne.js
 3. Initialize champagne() on parent element
+
+---
 
 ### Options
 - `beginning_delay`: _integer (default: 300)_, delay before animation starts
@@ -15,6 +16,14 @@ Version 0.0.6
 ### Callbacks
 - `onFinish`: called once all elements are faded in
 
+---
+
 ### Future Considerations
 - CSS3 only animations
 - Use of other transitions
+
+---
+
+Copyright (c) 2012 [Fresh Tilled Soil](http://freshtilledsoil.com)
+
+MIT License, http://www.opensource.org/licenses/mit-license.php

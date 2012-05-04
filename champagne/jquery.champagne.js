@@ -1,7 +1,7 @@
 // Champagne.js, a jQuery plugin to randomize the display of objects in a grid
 // by Sarah Canieso for Fresh Tilled Soil, http://freshtilledsoil.com
 //
-// Version 0.0.5
+// Version 0.0.6
 // Full source at https://github.com/freshtilledsoil/champagne
 // Copyright (c) 2012 Fresh Tilled Soil http://freshtilledsoil.com
 
