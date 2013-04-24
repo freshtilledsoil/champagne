@@ -1,5 +1,10 @@
 # Champagne.js
-Version 0.0.6
+Version 0.0.7
+
+### Change Log
+- `04.24.13` Cache $el, add Grunt
+
+---
 
 ### Usage
 1. Style grid layout with CSS
@@ -19,6 +24,7 @@ Version 0.0.6
 ---
 
 ### Future Considerations
+- Add Less Grunt task
 - CSS3 only animations
 - Use of other transitions
 
