@@ -1,0 +1,15 @@
+{
+  "name": "champagne-js",
+  "version": "0.0.7",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "0.4.1",
+    "grunt-contrib-jshint": "0.1.1rc6",
+    "grunt-contrib-sass": "~0.2.2rc7",
+    "grunt-contrib-uglify": "~0.1.1rc6",
+    "grunt-regarde": "~0.1.1"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}

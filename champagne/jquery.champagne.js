@@ -1,52 +1,55 @@
 // Champagne.js, a jQuery plugin to randomize the display of objects in a grid
 // by Sarah Canieso for Fresh Tilled Soil, http://freshtilledsoil.com
 //
-// Version 0.0.6
+// Version 0.0.7
 // Full source at https://github.com/freshtilledsoil/champagne
 // Copyright (c) 2012 Fresh Tilled Soil http://freshtilledsoil.com
 
 // MIT License, http://www.opensource.org/licenses/mit-license.php
 (function($) {
-    $.fn.champagne = function(options) {
-        var settings = $.extend({
-            beginning_delay: 300,
-            delay_between: 50,
-            duration: 500,
-            onFinish: function() {}
-        }, options);
+  $.fn.champagne = function(options) {
+    var settings = $.extend({
+      beginning_delay: 300,
+      delay_between: 50,
+      duration: 500,
+      onFinish: function() {}
+    }, options);
 
-        return this.each(function() {
-            // Wrap each li's contents in a <div class="hidden"></div>
-            $(this).children().each(function() {
-                $(this).contents().wrap("<div class='hidden'></div>");
-            });
+    return this.each(function() {
+      var $self = $(this),
+          array;
 
-            var array = $(this).children().children("div.hidden");
+      // Wrap each li's contents in a <div class="hidden"></div>
+      $self.children().each(function() {
+        $(this).contents().wrap('<div class="hidden" style="display: none;"></div>');
+      });
 
-            // Begin animation
-            setTimeout(function() {
-                showRandom();
-            }, settings.beginning_delay);
+      array = $self.children().children('div.hidden');
 
-            function showRandom() {
-                var random = Math.floor(Math.random() * array.length);
+      // Begin animation
+      setTimeout(function() {
+        showRandom();
+      }, settings.beginning_delay);
 
-                // Fade in random element
-                $(array[random]).fadeIn(settings.duration);
-                array.splice(random, 1);
+      function showRandom() {
+        var random = Math.floor(Math.random() * array.length);
 
-                if (array.length > 0) {
-                    // Continue animating elements until array is empty
-                    setTimeout(function() {
-                        showRandom();
-                    }, settings.delay_between);
-                } else {
-                    // onFinish callback
-                    setTimeout(function() {
-                        settings.onFinish.call(this);
-                    }, settings.duration);
-                }
-            }
-        });
-    };
+        // Fade in random element
+        $(array[random]).fadeIn(settings.duration);
+        array.splice(random, 1);
+
+        if (array.length > 0) {
+          // Continue animating elements until array is empty
+          setTimeout(function() {
+            showRandom();
+          }, settings.delay_between);
+        } else {
+          // onFinish callback
+          setTimeout(function() {
+            settings.onFinish.call(this);
+          }, settings.duration);
+        }
+      }
+    });
+  };
 })(jQuery);
