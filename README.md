@@ -2,6 +2,8 @@
 Version 0.0.7
 
 ### Change Log
+
+- `07.14.13` Add effect option
 - `04.24.13` Cache $el, add Grunt
 
 ---
@@ -15,8 +17,10 @@ Version 0.0.7
 
 ### Options
 - `beginning_delay`: _integer (default: 300)_, delay before animation starts
+- `childrenSelector`: _string (default: undefined)_, choose the selector of the children to fade in
 - `delay_between`: _integer (default: 50)_, delay between each element's animation
 - `duration`: _integer (default: 500)_, duration of each element's animation
+- `effect`: _string (default: 'fadeIn')_, `'fadeIn'`, `'slideDown'` or `'addClass'` (adds class `.visible`)
 
 ### Callbacks
 - `onFinish`: called once all elements are faded in
