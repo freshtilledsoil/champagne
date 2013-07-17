@@ -9,9 +9,9 @@
 (function($) {
   $.fn.champagne = function(options) {
     var settings = $.extend({
-      beginning_delay: 300,
+      beginningDelay: 300,
       childrenSelector: undefined,
-      delay_between: 50,
+      delayBetween: 50,
       duration: 500,
       effect: 'fadeIn',
       onFinish: function() {}
@@ -40,7 +40,7 @@
       // Begin animation
       setTimeout(function() {
         showRandom();
-      }, settings.beginning_delay);
+      }, settings.beginningDelay);
 
       function showRandom() {
         var random = Math.floor(Math.random() * array.length);
@@ -58,7 +58,7 @@
           // Continue animating elements until array is empty
           setTimeout(function() {
             showRandom();
-          }, settings.delay_between);
+          }, settings.delayBetween);
         } else {
           // onFinish callback
           setTimeout(function() {
