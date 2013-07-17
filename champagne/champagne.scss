@@ -77,4 +77,35 @@ $champagneLiPadding: 20px;
   div.hidden {
     display: none;
   }
+
+  div.visible {
+    display: block;
+    -webkit-animation: scaleIn 1.2s ease;
+    -moz-animation: scaleIn 1.2s ease;
+    animation: scaleIn 1.2s ease;
+  }
+}
+
+@-webkit-keyframes scaleIn {
+  from { -webkit-transform: scale(0); }
+  66% { -webkit-transform: scale(1.1); }
+  to { -webkit-transform: scale(1); }
+}
+
+@-moz-keyframes scaleIn {
+  from { -webkit-transform: scale(0); }
+  66% { -webkit-transform: scale(1.1); }
+  to { -webkit-transform: scale(1); }
+}
+
+@-o-keyframes scaleIn {
+  from { -webkit-transform: scale(0); }
+  66% { -webkit-transform: scale(1.1); }
+  to { -webkit-transform: scale(1); }
+}
+
+@keyframes scaleIn {
+  from { -webkit-transform: scale(0); }
+  66% { -webkit-transform: scale(1.1); }
+  to { -webkit-transform: scale(1); }
 }
