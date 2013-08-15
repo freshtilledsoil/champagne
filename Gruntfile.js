@@ -39,15 +39,7 @@ module.exports = function (grunt) {
       }
     },
 
-    regarde: {
-      // TODO: need to reload grunt when updating Gruntfile
-      gruntfile: {
-        files: 'Gruntfile.js',
-        tasks: 'restart-grunt',
-        options: {
-          nocase: true
-        }
-      },
+    watch: {
       scripts: {
         files: javascripts,
         tasks: [
@@ -64,16 +56,14 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.loadNpmTasks('grunt-regarde');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('restart-grunt', 'Restart grunt', function () {
-    grunt.fail.warn('Please restart grunt.');
-  });
+  grunt.registerTask('default', ['watch']);
 
-  grunt.registerTask('default', [
+  grunt.registerTask('dev', [
     'jshint',
     'uglify',
     'sass'

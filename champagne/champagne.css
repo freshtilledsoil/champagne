@@ -8,12 +8,14 @@ and the height of the ul is equal to the number of rows times li height.
 Don't forget to account for margin, padding, and borders!
 
 */
-/* line 18 */
+/* line 17, champagne/champagne.scss */
 .champagne {
-  border: 1px solid #ddd;
-  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  border: 0 solid #dddddd;
+  border-left-width: 1px;
+  border-top-width: 1px;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
   clear: both;
   font-size: 20px;
   font-weight: bold;
@@ -22,106 +24,102 @@ Don't forget to account for margin, padding, and borders!
   margin: 30px auto;
   padding: 0;
   position: relative;
-  width: 768px; }
-  /* line 33 */
-  .champagne:after {
-    background: transparent;
+  width: 750px; }
+  /* line 36, champagne/champagne.scss */
+  .champagne:after, .champagne:before {
     bottom: 10px;
-    -webkit-box-shadow: 8px 12px 10px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 8px 12px 10px rgba(0, 0, 0, 0.2);
-    box-shadow: 8px 12px 10px rgba(0, 0, 0, 0.2);
     content: '';
     height: 55%;
     position: absolute;
+    width: 70%;
+    z-index: -1; }
+  /* line 46, champagne/champagne.scss */
+  .champagne:after {
+    -webkit-box-shadow: 8px 12px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 8px 12px 10px rgba(0, 0, 0, 0.1);
     right: 10px;
     -webkit-transform: skew(4deg) rotate(2deg);
     -moz-transform: skew(4deg) rotate(2deg);
-    transform: skew(4deg) rotate(2deg);
-    width: 70%;
-    z-index: -1; }
-  /* line 50 */
+    transform: skew(4deg) rotate(2deg); }
+  /* line 56, champagne/champagne.scss */
   .champagne:before {
-    background: transparent;
-    bottom: 10px;
-    -webkit-box-shadow: -8px 12px 10px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: -8px 12px 10px rgba(0, 0, 0, 0.2);
-    box-shadow: -8px 12px 10px rgba(0, 0, 0, 0.2);
-    content: '';
-    height: 55%;
+    -webkit-box-shadow: -8px 12px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: -8px 12px 10px rgba(0, 0, 0, 0.1);
     left: 10px;
-    position: absolute;
     -webkit-transform: skew(-4deg) rotate(-2deg);
     -moz-transform: skew(-4deg) rotate(-2deg);
-    transform: skew(-4deg) rotate(-2deg);
-    width: 70%;
-    z-index: -2; }
-  /* line 67 */
+    transform: skew(-4deg) rotate(-2deg); }
+  /* line 65, champagne/champagne.scss */
   .champagne > li {
-    background: #fff;
-    border: 1px solid #ddd;
-    height: 30px;
+    border: 0 solid #dddddd;
+    border-bottom-width: 1px;
+    border-right-width: 1px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 16.66667%;
     float: left;
     padding: 20px;
     text-align: center;
-    width: 150px; }
-  /* line 77 */
+    width: 25%; }
+  /* line 79, champagne/champagne.scss */
   .champagne div.hidden {
     display: none; }
-  /* line 81 */
+  /* line 83, champagne/champagne.scss */
   .champagne div.visible {
     display: block;
-    -webkit-animation: scaleIn 1.2s ease;
-    -moz-animation: scaleIn 1.2s ease;
-    animation: scaleIn 1.2s ease; }
+    -webkit-animation: scaleIn 0.6s ease;
+    -moz-animation: scaleIn 0.6s ease;
+    animation: scaleIn 0.6s ease; }
 
 @-webkit-keyframes scaleIn {
-  /* line 90 */
+  /* line 92, champagne/champagne.scss */
   from {
     -webkit-transform: scale(0); }
 
-  /* line 91 */
+  /* line 93, champagne/champagne.scss */
   66% {
     -webkit-transform: scale(1.1); }
 
-  /* line 92 */
+  /* line 94, champagne/champagne.scss */
   to {
     -webkit-transform: scale(1); } }
 
 @-moz-keyframes scaleIn {
-  /* line 96 */
+  /* line 98, champagne/champagne.scss */
   from {
     -webkit-transform: scale(0); }
 
-  /* line 97 */
+  /* line 99, champagne/champagne.scss */
   66% {
     -webkit-transform: scale(1.1); }
 
-  /* line 98 */
+  /* line 100, champagne/champagne.scss */
   to {
     -webkit-transform: scale(1); } }
 
 @-o-keyframes scaleIn {
-  /* line 102 */
+  /* line 104, champagne/champagne.scss */
   from {
     -webkit-transform: scale(0); }
 
-  /* line 103 */
+  /* line 105, champagne/champagne.scss */
   66% {
     -webkit-transform: scale(1.1); }
 
-  /* line 104 */
+  /* line 106, champagne/champagne.scss */
   to {
     -webkit-transform: scale(1); } }
 
 @keyframes scaleIn {
-  /* line 108 */
+  /* line 110, champagne/champagne.scss */
   from {
     -webkit-transform: scale(0); }
 
-  /* line 109 */
+  /* line 111, champagne/champagne.scss */
   66% {
     -webkit-transform: scale(1.1); }
 
-  /* line 110 */
+  /* line 112, champagne/champagne.scss */
   to {
     -webkit-transform: scale(1); } }
