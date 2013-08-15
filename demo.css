@@ -55,7 +55,7 @@ h2 strong {
 
 nav {
   margin: 0 auto 40px;
-  overflow: hidden;
+  text-align: center;
   width: 220px;
 }
 nav ul {
@@ -63,8 +63,11 @@ nav ul {
   padding: 10px 0;
 }
 nav li {
-  float: left;
-  width: 50%;
+  display: inline;
+  padding-left: 10px;
+}
+nav li:first-child {
+  padding-left: 0;
 }
 
 a {
@@ -98,31 +101,26 @@ a.button {
   background-image: -webkit-linear-gradient(top, #709, #608);
   background-image: linear-gradient(top, #709, #608);
   border: 1px solid #406;
-  -moz-border-radius:     5px;
-  -ms-border-radius:      5px;
-  -o-border-radius:       5px;
-  -webkit-border-radius:  5px;
-  border-radius:          5px;
-  -moz-box-shadow:    inset 0 1px 0 #a5b;
+  -webkit-border-radius: 3px;
+  border-radius:         3px;
   -webkit-box-shadow: inset 0 1px 0 #a5b;
   box-shadow:         inset 0 1px 0 #a5b;
   clear: both;
   color: #fff;
   display: block;
   font-weight: bold;
-  padding: 6px 8px;
+  padding: 6px 8px 8px;
   text-align: center;
-  text-shadow: 0 -2px 0 #203;
-  -webkit-transition: box-shadow 0.2s ease;
-  -moz-transition:    box-shadow 0.2s ease;
-  -o-transition:      box-shadow 0.2s ease;
-  transition:         box-shadow 0.2s ease;
+  text-shadow: 0 -1px 0 #203;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition:    all 0.2s ease;
+  -o-transition:      all 0.2s ease;
+  transition:         all 0.2s ease;
 }
 
 a.button:hover {
-  -moz-box-shadow:    inset 0 1px 0 #a5b, 0 1px 3px #888;
-  -webkit-box-shadow: inset 0 1px 0 #a5b, 0 1px 3px #888;
-  box-shadow:         inset 0 1px 0 #a5b, 0 1px 3px #888;
+  -webkit-box-shadow: inset 0 1px 0 #a5b, 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow:         inset 0 1px 0 #a5b, 0 1px 3px rgba(0, 0, 0, 0.2);
   text-decoration: none;
 }
 
@@ -134,11 +132,11 @@ a.button:active {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#608), to(#709));
   background-image: -webkit-linear-gradient(top, #608, #709);
   background-image: linear-gradient(top, #608, #709);
-  -moz-box-shadow:    inset 0 1px 0 #a5b;
   -webkit-box-shadow: inset 0 1px 0 #a5b;
   box-shadow:         inset 0 1px 0 #a5b;
 }
 
 ul.champagne img {
-  margin-top: 1px;
+  margin-left: -20px;
+  margin-top: -19px;
 }

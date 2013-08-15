@@ -1,5 +1,5 @@
 # Champagne.js
-Version 0.0.7
+Version 0.1.0
 
 ### Change Log
 
@@ -33,6 +33,10 @@ Version 0.0.7
 - Use of other transitions
 
 ---
+
+### Contributions
+
+- Thanks @pdud for adding effects
 
 Copyright (c) 2012 [Fresh Tilled Soil](http://freshtilledsoil.com)
 

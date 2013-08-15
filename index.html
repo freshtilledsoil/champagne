@@ -27,9 +27,9 @@
       <a class="button" href="https://github.com/freshtilledsoil/champagne/zipball/master">Download from Github</a>
 
       <ul>
-        <li><a href="javascript: void(0)" id="view-text" class="active">text demo</a></li>
+        <li><a href="#" id="view-text" class="active">text demo</a></li>
 
-        <li><a href="javascript: void(0)" id="view-images">images demo</a></li>
+        <li><a href="#" id="view-images">images demo</a></li>
       </ul>
     </nav>
 
@@ -62,40 +62,55 @@
   </div> <!-- end .container -->
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script type="text/javascript" src="champagne/jquery.champagne.min.js"></script>
+  <script type="text/javascript" src="champagne/jquery.champagne.js"></script>
 
   <script type="text/javascript">
-  $(function() {
-    $("ul.champagne").champagne();
+  $(function () {
+    $('ul.champagne').champagne();
 
-      // Demo
-      $("#view-images").click(function() {
-        if (!$(this).hasClass("active")) {
-          $("#view-text").removeClass("active");
-          $(this).addClass("active");
+    // Demo
+    $('#view-images').click(function (e) {
+      e.preventDefault();
+      var $link = $(this),
+      $champagne = $('ul.champagne');
 
-          $("ul.champagne li").each(function() {
-            $(this).css({height: 70, padding: 0, width: 190}).addClass($(this).text()).contents().remove();
-            $(this).append("<img src='http://placehold.it/188x68/fafafa/999' alt='Image' />");
-          });
-          $("ul.champagne").champagne();
-        }
-      });
+      if (!$link.hasClass('active')) {
+        $('#view-text').removeClass('active');
+        $link.addClass('active');
 
-      $("#view-text").click(function() {
-        if (!$(this).hasClass("active")) {
-          $("#view-images").removeClass("active");
-          $(this).addClass("active");
+        $champagne.find('li').each(function () {
+          var $li = $(this),
+          color = function () {
+            return Math.floor(Math.random() * 16777215).toString(16);
+          };
 
-          $("ul.champagne li").each(function() {
-            $(this).removeAttr("style").contents().remove()
-            $(this).append($(this).attr("class")).removeAttr("class");
-          });
+          $li.attr('data-title', $li.text()).contents().remove();
+          $li.append('<img src="http://placehold.it/185x68/fafafa/' + color() + '" alt="Image">');
+        });
 
-          $("ul.champagne").champagne();
-        }
-      });
+        $champagne.champagne();
+      }
     });
+
+    $('#view-text').click(function (e) {
+      e.preventDefault();
+      var $link = $(this),
+      $champagne = $('ul.champagne');
+
+      if (!$link.hasClass('active')) {
+        $('#view-images').removeClass('active');
+        $link.addClass('active');
+
+        $champagne.find('li').each(function () {
+          var $li = $(this);
+          $li.removeAttr('style').contents().remove()
+          $li.append($li.data('title'));
+        });
+
+        $champagne.champagne();
+      }
+    });
+  });
 </script>
 </body>
 </html>
